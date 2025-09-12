@@ -39,15 +39,15 @@ export default function Contact() {
             <div className={styles.contactDetails}>
               <div className={styles.contactItem}>
                 <h4>Email</h4>
-                <p>contact@techistry-integrated.com</p>
+                <p>techistryintegrated@gmail.com</p>
               </div>
               <div className={styles.contactItem}>
                 <h4>Phone</h4>
-                <p>+1 (555) 123-4567</p>
+                <p>+234 0000 0000</p>
               </div>
               <div className={styles.contactItem}>
                 <h4>Address</h4>
-                <p>123 Tech Street<br />Innovation District<br />San Francisco, CA 94102</p>
+                <p>123 Tech Street<br />Innovation District<br />San Francisco</p>
               </div>
             </div>
           </div>
@@ -90,7 +90,7 @@ export default function Contact() {
             <div className={styles.formGroup}>
               <textarea
                 name="message"
-                placeholder="Tell us about your project..."
+                placeholder="Write your message here..."
                 rows={5}
                 value={formData.message}
                 onChange={handleChange}

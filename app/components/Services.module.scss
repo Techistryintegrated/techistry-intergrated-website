@@ -1,10 +1,6 @@
 .services {
   padding: 5rem 0;
   background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
-  
-  @media (prefers-color-scheme: dark) {
-    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
-  }
 }
 
 .servicesHeader {
@@ -46,13 +42,11 @@
     transform: translateY(-5px);
     box-shadow: 0 15px 35px rgba(37, 99, 235, 0.1);
   }
-  
-  @media (prefers-color-scheme: dark) {
-    background: rgba(30, 41, 59, 0.8);
-  }
+
   
   h3 {
-    font-size: 1.5rem;
+    font-family: inherit;
+    font-size: 1.2rem;
     color: var(--primary-color);
     margin-bottom: 1rem;
   }
@@ -76,7 +70,7 @@
         content: '✓';
         position: absolute;
         left: 0;
-        color: var(--primary-color);
+        color: var(--secondary-color);
         font-weight: bold;
       }
     }

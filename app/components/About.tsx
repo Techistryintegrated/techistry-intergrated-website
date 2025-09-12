@@ -20,7 +20,7 @@ export default function About() {
             <div className={styles.stats}>
               <div className={styles.stat}>
                 <h3>500+</h3>
-                <p>Projects Completed</p>
+                <p>something</p>
               </div>
               <div className={styles.stat}>
                 <h3>50+</h3>
@@ -28,16 +28,11 @@ export default function About() {
               </div>
               <div className={styles.stat}>
                 <h3>10+</h3>
-                <p>Years Experience</p>
+                <p>something</p>
               </div>
             </div>
           </div>
-          <div className={styles.aboutImage}>
-            <div className={styles.placeholder}>
-              <h3>Our Mission</h3>
-              <p>To empower businesses through innovative technology solutions that drive growth and success.</p>
-            </div>
-          </div>
+         
         </div>
       </div>
     </section>

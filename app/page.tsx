@@ -4,17 +4,17 @@ import Services from "./components/Services";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import Product from "./components/Products";
 
 export default function Home() {
   return (
     <>
       <Header />
-      <main>
-        <Hero />
-        <About />
-        <Services />
-        <Contact />
-      </main>
+      <Hero />
+      <About />
+      <Services />
+      <Product />
+      <Contact />
       <Footer />
     </>
   );

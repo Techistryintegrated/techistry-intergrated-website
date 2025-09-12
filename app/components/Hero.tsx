@@ -6,8 +6,11 @@ export default function Hero() {
       <div className="container">
         <div className={styles.heroContent}>
           <div className={styles.heroText}>
+            <figure>
+              <img src="/logo.png" alt="Techistry Logo" width={100} height={100} />
+            </figure>
             <h1 className={styles.heroTitle}>
-              Innovative Technology
+             Researching, Designing, Developing
               <span className={styles.highlight}> Solutions</span>
             </h1>
             <p className={styles.heroSubtitle}>
@@ -18,21 +21,12 @@ export default function Hero() {
               <a href="#services" className="btn btn-primary">
                 Our Services
               </a>
-              <a href="#contact" className="btn btn-outline">
+              <a href="#contact" className="btn btn-clear">
                 Get In Touch
               </a>
             </div>
           </div>
-          <div className={styles.heroVisual}>
-            <div className={styles.techGrid}>
-              <div className={styles.techCard}>AI/ML</div>
-              <div className={styles.techCard}>Cloud</div>
-              <div className={styles.techCard}>DevOps</div>
-              <div className={styles.techCard}>Mobile</div>
-              <div className={styles.techCard}>Web</div>
-              <div className={styles.techCard}>IoT</div>
-            </div>
-          </div>
+        
         </div>
       </div>
     </section>

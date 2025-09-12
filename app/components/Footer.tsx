@@ -1,4 +1,7 @@
+import Image from "next/image";
 import styles from "./Footer.module.scss";
+import { Github, Linkedin, Mail, Twitter } from "lucide-react";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -7,8 +10,7 @@ export default function Footer() {
         <div className={styles.footerContent}>
           <div className={styles.footerSection}>
             <div className={styles.logo}>
-              <h3>Techistry</h3>
-              <span>Integrated</span>
+              <Image src="/logo.png" alt="Techistry Logo" width={50} height={50} />
             </div>
             <p>
               Empowering businesses through innovative technology solutions 
@@ -36,19 +38,16 @@ export default function Footer() {
             </ul>
           </div>
           
-          <div className={styles.footerSection}>
-            <h4>Connect</h4>
-            <ul>
-              <li><a href="#linkedin">LinkedIn</a></li>
-              <li><a href="#twitter">Twitter</a></li>
-              <li><a href="#github">GitHub</a></li>
-              <li><a href="#email">Email</a></li>
+            <ul className={styles.socials}>
+              <li><Link href="#linkedin"><Linkedin/></Link></li>
+              <li><Link href="#twitter"><Twitter/></Link></li>
+              <li><Link href="#github"><Github/></Link></li>
+              <li><Link href="#email"><Mail/></Link></li>
             </ul>
-          </div>
         </div>
         
         <div className={styles.footerBottom}>
-          <p>&copy; 2024 Techistry Integrated. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Techistry Integrated. All rights reserved.</p>
           <div className={styles.footerLinks}>
             <a href="#privacy">Privacy Policy</a>
             <a href="#terms">Terms of Service</a>
