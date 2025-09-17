@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./Footer.module.scss";
-import { Github, Linkedin, Mail, Twitter } from "lucide-react";
+import { Facebook, Instagram, Mail, Twitter } from "lucide-react";
 import Link from "next/link";
 
 export default function Footer() {
@@ -12,13 +12,13 @@ export default function Footer() {
             <div className={styles.logo}>
               <Image src="/logo.png" alt="Techistry Logo" width={50} height={50} />
             </div>
-            <p>
+            {/* <p>
               Empowering businesses through innovative technology solutions 
               that drive growth and success in the digital age.
-            </p>
+            </p> */}
           </div>
           
-          <div className={styles.footerSection}>
+          {/* <div className={styles.footerSection}>
             <h4>Services</h4>
             <ul>
               <li><a href="#services">Web Development</a></li>
@@ -37,12 +37,12 @@ export default function Footer() {
               <li><a href="#blog">Blog</a></li>
             </ul>
           </div>
-          
+           */}
             <ul className={styles.socials}>
-              <li><Link href="#linkedin"><Linkedin/></Link></li>
-              <li><Link href="#twitter"><Twitter/></Link></li>
-              <li><Link href="#github"><Github/></Link></li>
-              <li><Link href="#email"><Mail/></Link></li>
+              <li><Link href="https://www.facebook.com/share/1761Z6v5gw/"><Facebook/></Link></li>
+              <li><Link href="https://x.com/techistryi"><Twitter/></Link></li>
+              <li><Link href="https://www.instagram.com/integratedtechistry?igsh=MWRnOWt5YzBqOXU2Nw==/"><Instagram/></Link></li>
+              <li><Link href="mailto:techistryintegrated@gmail.com"><Mail/></Link></li>
             </ul>
         </div>
         

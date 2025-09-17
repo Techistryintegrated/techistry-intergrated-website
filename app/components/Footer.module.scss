@@ -6,7 +6,9 @@
 
 .footerContent {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
+  // grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  align-items:end;
   gap: 2rem;
   margin-bottom: 2rem;
 
@@ -70,12 +72,16 @@
   }
 }
 .socials {
-  grid-area: 2;
+  // grid-area: 2;
   display: flex;
   gap: 1rem;
   list-style: none;
+  justify-content: end;
   a{
     color: #ffffff !important;
+  }
+  @media screen and (max-width: 768px) {
+    justify-content: start;
   }
 }
 .footerBottom {
