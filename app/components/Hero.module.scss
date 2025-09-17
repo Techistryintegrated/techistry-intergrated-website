@@ -2,7 +2,7 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding: 2rem 0;
+  padding: 10rem 0 2rem;
   background-image: url('/bg.png');
 }
 
@@ -69,3 +69,35 @@
   align-items: center;
 }
 
+.heroCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+  
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.heroCard {
+     background: #ffffff00;
+    text-align: center;
+    border-radius: 1rem;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, .1);
+  
+  h3 {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    color: var(--foreground);
+  }
+  
+  p {
+    font-size: 1rem;
+    color: var(--text-light);
+    line-height: 1.4;
+  }
+}
