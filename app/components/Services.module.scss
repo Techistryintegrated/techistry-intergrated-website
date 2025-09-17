@@ -1,6 +1,7 @@
 .services {
   padding: 5rem 0;
-  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+  // background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+  // background: url('/services-bg.jpg');
 }
 
 .servicesHeader {
@@ -33,7 +34,9 @@
 .serviceCard {
   background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(10px);
-  border: 1px solid var(--border-color);
+  // border: 1px solid var(--border-color);
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1);
+
   border-radius: 1rem;
   padding: 2rem;
   transition: all 0.3s ease;
