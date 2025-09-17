@@ -6,9 +6,11 @@
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "serve": "npx serve@latest out"
   },
   "dependencies": {
+    "aos": "^3.0.0-beta.6",
     "lucide-react": "^0.544.0",
     "next": "15.5.3",
     "react": "19.1.0",
@@ -17,6 +19,7 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@types/aos": "^3.0.7",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
