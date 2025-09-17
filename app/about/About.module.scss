@@ -4,15 +4,17 @@
 }
 
 .aboutContent {
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    display: grid;
-    align-items: center;
-    justify-items: center;  
-    img{
-      border-radius: 1rem;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    }
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  img {
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    object-fit: cover;
+  }
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -26,7 +28,7 @@
     margin-bottom: 1.5rem;
     color: var(--foreground);
   }
-  
+
   p {
     font-size: 1rem;
     margin-bottom: 1.5rem;
@@ -38,7 +40,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   margin-top: 2rem;
-  
+
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
     gap: 1rem;
@@ -47,21 +49,21 @@
 
 .stat {
   text-align: left;
- 
+
   h3 {
     font-size: 2rem;
     font-weight: normal;
     color: var(--primary-color);
     margin-bottom: 0.5rem;
   }
-  
+
   p {
     font-size: 0.9rem;
     margin: 0;
     color: var(--text-light);
   }
   @media (max-width: 768px) {
-    text-align: center;
+    // text-align: center;
   }
 }
 
@@ -72,19 +74,23 @@
 }
 
 .placeholder {
-  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--accent-color)
+  );
   color: white;
   padding: 3rem;
   border-radius: 1rem;
   text-align: center;
   max-width: 400px;
-  
+
   h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
     color: white;
   }
-  
+
   p {
     margin: 0;
     color: rgba(255, 255, 255, 0.9);
