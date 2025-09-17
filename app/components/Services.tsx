@@ -35,16 +35,21 @@ export default function Services() {
   ];
 
   return (
-    <section className={styles.services} id="services">
-      <div className="container">
-        <div className={styles.servicesHeader}>
+    <section className={styles.services} id="services" data-aos="fade-up">
+      <div className="container" data-aos="fade-up" data-aos-delay="100">
+        <div className={styles.servicesHeader} data-aos="fade-up" data-aos-delay="200">
           <h2>Our Services</h2>
           <p>Comprehensive technology solutions tailored to your business needs</p>
         </div>
         
         <div className={styles.servicesGrid}>
           {services.map((service, index) => (
-            <div key={index} className={styles.serviceCard}>
+            <div
+              key={index}
+              className={styles.serviceCard}
+              data-aos="fade-up"
+              data-aos-delay={300 + index * 100}
+            >
               <h3>{service.title}</h3>
               <p>{service.description}</p>
               <ul>

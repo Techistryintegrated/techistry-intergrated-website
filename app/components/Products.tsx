@@ -18,7 +18,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
   features 
 }) => {
   return (
-    <div className={styles.productCard}>
+    <div className={styles.productCard} data-aos="fade-up">
       <div className={styles.cardHeader}>
         <div className={styles.iconContainer}>
           <span className={styles.icon}>{icon}</span>
@@ -38,7 +38,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
           <h4 className={styles.featuresTitle}>Key Features:</h4>
           <ul className={styles.featuresList}>
             {features.map((feature, index) => (
-              <li key={index} className={styles.featureItem}>
+              <li key={index} className={styles.featureItem} data-aos="fade-right">
                 <span className={styles.checkIcon}>✓</span>
                 {feature}
               </li>
@@ -53,13 +53,14 @@ const ProductCard: React.FC<ProductCardProps> = ({
             href={url} 
             target="_blank" 
             rel="noopener noreferrer"
-            className={`${styles.primaryButton} btn btn-primary` }
+            className={`${styles.primaryButton} btn btn-primary`}
+            data-aos="zoom-in"
           >
             Visit Website
             <span className={styles.arrowIcon}>→</span>
           </a>
         ) : (
-          <button className={styles.secondaryButton} disabled>
+          <button className={styles.secondaryButton} disabled data-aos="zoom-in">
             Coming Soon
           </button>
         )}
@@ -83,24 +84,24 @@ const Product: React.FC = () => {
         'Comprehensive tool organization'
       ]
     },
-    {
-      title: 'StreamFutbal',
-      description: 'The ultimate soccer streaming and information platform. Get live matches, stats, and comprehensive soccer data all in one place.',
-      status: 'development' as const,
-      icon: '⚽',
-      features: [
-        'Live soccer streaming',
-        'Real-time match statistics',
-        'Team and player profiles',
-        'Match schedules and results'
-      ]
-    }
+    // {
+    //   title: 'StreamFutbal',
+    //   description: 'The ultimate soccer streaming and information platform. Get live matches, stats, and comprehensive soccer data all in one place.',
+    //   status: 'development' as const,
+    //   icon: '⚽',
+    //   features: [
+    //     'Live soccer streaming',
+    //     'Real-time match statistics',
+    //     'Team and player profiles',
+    //     'Match schedules and results'
+    //   ]
+    // }
   ];
 
   return (
-    <section className={styles.productSection} id="products">
+    <section className={styles.productSection} id="products" data-aos="fade-in">
       <div className={styles.container}>
-        <div className={styles.sectionHeader}>
+        <div className={styles.sectionHeader} data-aos="fade-down">
           <h2 className={styles.sectionTitle}>Our Products</h2>
           <p className={styles.sectionSubtitle}>
             Discover our innovative solutions designed to enhance your digital experience
