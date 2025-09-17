@@ -41,14 +41,10 @@ export default function Contact() {
                 <h4>Email</h4>
                 <p>techistryintegrated@gmail.com</p>
               </div>
-              <div className={styles.contactItem}>
-                <h4>Phone</h4>
-                <p>+234 0000 0000</p>
-              </div>
-              <div className={styles.contactItem}>
+              {/* <div className={styles.contactItem}>
                 <h4>Address</h4>
                 <p>123 Tech Street<br />Innovation District<br />San Francisco</p>
-              </div>
+              </div> */}
             </div>
           </div>
           
