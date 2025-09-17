@@ -1,3 +1,4 @@
+import Image from "next/image";
 import styles from "./About.module.scss";
 
 export default function About() {
@@ -19,20 +20,18 @@ export default function About() {
             </p>
             <div className={styles.stats}>
               <div className={styles.stat}>
-                <h3>500+</h3>
-                <p>something</p>
+                <h3>150+</h3>
+                <p>Empowering Brands</p>
               </div>
               <div className={styles.stat}>
-                <h3>50+</h3>
-                <p>Happy Clients</p>
+                <h3>2</h3>
+                <p>Solutions delivered</p>
               </div>
-              <div className={styles.stat}>
-                <h3>10+</h3>
-                <p>something</p>
-              </div>
+             
             </div>
           </div>
-         
+         <Image src="/about-image-1.jpg" alt="About Techistry 0ne" width={500} height={400} />
+         <Image src="/about-image-2.jpg" alt="About Techistry two" width={500} height={400} />
         </div>
       </div>
     </section>
