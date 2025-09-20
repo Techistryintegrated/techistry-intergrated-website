@@ -5,6 +5,8 @@ import "aos/dist/aos.css";
 import AOSInitializer from "./AosInitializer";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import WhatsappFloat from "./whatsappFloat";
+
 
 export const metadata: Metadata = {
   title: "Techistry Integrated",
@@ -42,7 +44,11 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <WhatsappFloat/>
+         
+   
       </body>
+      
     </html>
   );
 }
