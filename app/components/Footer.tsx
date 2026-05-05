@@ -41,7 +41,7 @@ export default function Footer() {
             <ul className={styles.socials}>
               <li><Link href="https://www.facebook.com/share/1761Z6v5gw/"><Facebook/></Link></li>
               <li><Link href="https://x.com/techistryi"><Twitter/></Link></li>
-              <li><Link href="https://www.instagram.com/integratedtechistry?igsh=MWRnOWt5YzBqOXU2Nw==/"><Instagram/></Link></li>
+              <li><Link href="https://www.instagram.com/techistry.integrated?igsh=Y251ODBiaDU3eWpq&utm_source=qr"><Instagram/></Link></li>
               <li><Link href="mailto:techistryintegrated@gmail.com"><Mail/></Link></li>
             </ul>
         </div>

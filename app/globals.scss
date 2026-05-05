@@ -1,6 +1,5 @@
 // Global styles for Techistry Integrated Website
 
-// CSS Variables
 :root {
   --primary-color: #4593d3;
   --secondary-color: #5b4a98;
@@ -20,7 +19,6 @@
 //   }
 // }
 
-// Base styles
 * {
   margin: 0;
   padding: 0;
@@ -36,7 +34,7 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: "Krub", sans-serif;
+  font-family: "Google Sans", sans-serif;
   line-height: 1.6;
   max-width: 100vw;
   overflow-x: hidden;
