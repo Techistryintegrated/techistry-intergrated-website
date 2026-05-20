@@ -10,6 +10,7 @@
     "serve": "npx serve@latest out"
   },
   "dependencies": {
+    "@formspree/react": "^3.0.0",
     "aos": "^3.0.0-beta.6",
     "lucide-react": "^0.544.0",
     "next": "15.5.3",

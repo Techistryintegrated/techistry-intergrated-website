@@ -61,6 +61,14 @@
     margin-bottom: 1.5rem;
     color: var(--foreground);
   }
+
+  :global(span[role="alert"]),
+  :global(span[data-formspree-errors]) {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    color: #b91c1c;
+  }
 }
 
 .formGroup {
@@ -91,4 +99,34 @@
     resize: vertical;
     font-family: inherit;
   }
+}
+
+.successMessage {
+  margin-bottom: 1rem;
+  padding: 0.9rem 1rem;
+  border-radius: 0.75rem;
+  background: rgba(34, 197, 94, 0.12);
+  color: #166534;
+  border: 1px solid rgba(34, 197, 94, 0.25);
+}
+
+.formError {
+  margin-bottom: 1rem;
+  padding: 0.9rem 1rem;
+  border-radius: 0.75rem;
+  background: rgba(239, 68, 68, 0.12);
+  color: #b91c1c;
+  border: 1px solid rgba(239, 68, 68, 0.25);
+}
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }

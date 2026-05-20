@@ -1,29 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useForm, ValidationError } from "@formspree/react";
 import styles from "./Contact.module.scss";
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    company: "",
-    message: ""
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission here
-    alert("Thank you for your message! We'll get back to you soon.");
-    setFormData({ name: "", email: "", company: "", message: "" });
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
+  const [state, handleSubmit] = useForm("mvzykgdq");
 
   return (
     <section className={styles.contact} id="contact" data-aos="fade-up">
@@ -54,52 +35,83 @@ export default function Contact() {
           
           <form className={styles.contactForm} onSubmit={handleSubmit} data-aos="fade-left">
             <h3>Send us a message</h3>
+
+            {state.succeeded ? (
+              <p className={styles.successMessage} role="status">
+                Thanks for reaching out. We&apos;ll get back to you soon.
+              </p>
+            ) : null}
+
+            {state.errors ? (
+              <p className={styles.formError} role="alert">
+                Something went wrong while sending your message. Please try again.
+              </p>
+            ) : null}
             
             <div className={styles.formGroup} data-aos="fade-up" data-aos-delay="100">
+              <label htmlFor="name" className={styles.visuallyHidden}>
+                Your name
+              </label>
               <input
+                id="name"
                 type="text"
                 name="name"
                 placeholder="Your Name"
-                value={formData.name}
-                onChange={handleChange}
                 required
+                autoComplete="name"
               />
             </div>
             
             <div className={styles.formGroup} data-aos="fade-up" data-aos-delay="200">
+              <label htmlFor="email" className={styles.visuallyHidden}>
+                Your email
+              </label>
               <input
+                id="email"
                 type="email"
                 name="email"
                 placeholder="Your Email"
-                value={formData.email}
-                onChange={handleChange}
                 required
+                autoComplete="email"
               />
+              <ValidationError prefix="Email" field="email" errors={state.errors} />
             </div>
             
             <div className={styles.formGroup} data-aos="fade-up" data-aos-delay="300">
+              <label htmlFor="company" className={styles.visuallyHidden}>
+                Company
+              </label>
               <input
+                id="company"
                 type="text"
                 name="company"
                 placeholder="Company (Optional)"
-                value={formData.company}
-                onChange={handleChange}
+                autoComplete="organization"
               />
             </div>
             
             <div className={styles.formGroup} data-aos="fade-up" data-aos-delay="400">
+              <label htmlFor="message" className={styles.visuallyHidden}>
+                Message
+              </label>
               <textarea
+                id="message"
                 name="message"
                 placeholder="Write your message here..."
                 rows={5}
-                value={formData.message}
-                onChange={handleChange}
                 required
-              ></textarea>
+              />
+              <ValidationError prefix="Message" field="message" errors={state.errors} />
             </div>
             
-            <button type="submit" className="btn btn-primary" data-aos="zoom-in" data-aos-delay="500">
-              Send Message
+            <button
+              type="submit"
+              className="btn btn-primary"
+              data-aos="zoom-in"
+              data-aos-delay="500"
+              disabled={state.submitting}
+            >
+              {state.submitting ? "Sending..." : "Send Message"}
             </button>
           </form>
         </div>
